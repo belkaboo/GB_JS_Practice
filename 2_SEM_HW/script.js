@@ -57,5 +57,4 @@ else if (21 < day && day <= 31) console.log('3rd decade');
 */
 
 let inputNumber = +prompt('Input number');
-console.log(`В числе ${inputNumber} количество сотен: ${Math.floor(inputNumber / 100)}, десятков: ${Math.floor((inputNumber / 10) % 10)}, единиц: ${inputNumber % 10}`);
-
+console.log(`В числе ${inputNumber} количество сотен: ${Math.floor((inputNumber / 100) % 10)}, десятков: ${Math.floor((inputNumber / 10) % 10)}, единиц: ${inputNumber % 10}`);
