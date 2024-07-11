@@ -15,6 +15,3 @@ console.log(`${temp}\xB0C -> ${(((9 / 5) * temp) + 32).toFixed(1)}\xB0F`);
 const name = 'My Name'
 let admin = name;
 console.log(admin);
-
-
-
