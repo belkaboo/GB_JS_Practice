@@ -5,7 +5,7 @@
 */
 const num1 = +prompt('input 1st number')
 const num2 = +prompt('Input 2nd number');
-console.log((num1 <= 1 && 3 <= num2) ? true : false);
+console.log((num1 <= 1 && num2 >= 3) ? true : false);
 
 
 /*
