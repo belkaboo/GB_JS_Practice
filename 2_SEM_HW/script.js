@@ -3,8 +3,8 @@
 Создать переменные num1, num2 которые пользователь вводит с клавиатуры
 Проверьте, что переменная num1 равна или меньше 1, а переменная num2 больше или равна 3.
 */
-let num1 = +prompt('input 1st number')
-let num2 = +prompt('Input 2nd number');
+const num1 = +prompt('input 1st number')
+const num2 = +prompt('Input 2nd number');
 console.log((num1 <= 1 && 3 <= num2) ? true : false);
 
 
@@ -28,12 +28,11 @@ console.log((test === true) ? '+++' : '---');
 В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
 */
 
-let day = 31;
-
-if (0 < day && day <= 10) console.log('1st decade');
+const day = Math.floor(Math.random() * 31 + 1);
+console.log('day ' + day);
+if (day <= 10) console.log('1st decade');
 else if (10 < day && day <= 20) console.log('2nd decade');
-else if (21 < day && day <= 30) console.log('3rd decade');
-else console.log('4th decade');
+else if (21 < day && day <= 31) console.log('3rd decade');
 
 
 /*
