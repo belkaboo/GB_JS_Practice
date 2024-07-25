@@ -3,10 +3,9 @@
 Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2 ^ 3 степени + 3 ^ 3 степени
 */
 
-let number = 3;
 
-const getCubeOfNumber = () => number ** 3; // или Math.pow(number, 3);
-console.log(getCubeOfNumber(number));
+const getCubeOfNumber = (number) => number ** 3; // или Math.pow(number, 3);
+console.log(getCubeOfNumber(2) + getCubeOfNumber(3));
 
 
 
