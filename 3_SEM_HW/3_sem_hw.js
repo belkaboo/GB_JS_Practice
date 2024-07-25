@@ -67,3 +67,12 @@ console.log(`Максимальное из введённых - ${maxOfNumbers(i
 */
 
 
+const sumOfNumbers = (a, b) => +a + +b;
+const diffOfNumbers = (a, b) => (a > b) ? +a - +b : +b - +a;
+const multiplicationOfNumbers = (a, b) => +a * +b;
+const divisionOfNumbers = (a, b) => +a / +b
+
+console.log(sumOfNumbers(6, 2));
+console.log(diffOfNumbers(6, 2));
+console.log(multiplicationOfNumbers(6, 2));
+console.log(divisionOfNumbers(6, 2));
