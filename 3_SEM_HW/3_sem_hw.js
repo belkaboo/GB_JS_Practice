@@ -4,6 +4,7 @@
 */
 
 let number = 3;
+
 const getCubeOfNumber = () => number ** 3; // или Math.pow(number, 3);
 console.log(getCubeOfNumber(number));
 
@@ -15,6 +16,12 @@ console.log(getCubeOfNumber(number));
 Создать фукнцию, которая высчитывает 13 % от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
 */
 
+let salary = +prompt('Размер зарплаты?');
+if (salary == NaN) console.log('Значение задано неверно');
+
+const salaryTaxFree = () => salary * 0.87;
+
+console.log(`Размер заработной платы за вычетом налогов равен ${salaryTaxFree(salary)}`);
 
 
 /*
@@ -22,6 +29,27 @@ console.log(getCubeOfNumber(number));
 Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
 */
 
+alert('Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел')
+
+const maxOfNumbers = (a, b, c) => {
+    let maxResult = a;
+    if (maxResult < b) maxResult = b;
+    if (maxResult < c) maxResult = c;
+    return maxResult;
+}
+
+const inputCorrectValue = () => {
+    let correctNumber = +prompt(`Введите число `);
+    while (isNaN(correctNumber)) {
+        alert('Не число');
+        correctNumber = +prompt(`Введите число!!!`);
+    }
+    console.log(correctNumber);
+    return correctNumber;
+
+}
+
+console.log(`Максимальное из введённых - ${maxOfNumbers(inputCorrectValue(), inputCorrectValue(), inputCorrectValue())}`);
 
 
 /*
@@ -37,3 +65,5 @@ console.log(getCubeOfNumber(number));
 функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны.
 Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 */
+
+
