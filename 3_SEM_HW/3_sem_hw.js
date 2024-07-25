@@ -5,7 +5,7 @@
 
 
 const getCubeOfNumber = (number) => number ** 3; // или Math.pow(number, 3);
-console.log(getCubeOfNumber(2) + getCubeOfNumber(3));
+console.log(`Результат 2 ^ 3 степени + 3 ^ 3 степени - ${getCubeOfNumber(2) + getCubeOfNumber(3)}`);
 
 
 
@@ -16,9 +16,9 @@ console.log(getCubeOfNumber(2) + getCubeOfNumber(3));
 */
 
 let salary = +prompt('Размер зарплаты?');
-if (salary == NaN) console.log('Значение задано неверно');
+if (isNaN(salary)) console.log('Значение задано неверно');
 
-const salaryTaxFree = () => salary * 0.87;
+const salaryTaxFree = () => (!isNaN(salary) && salary > 0) ? salary * 0.87 : 0;
 
 console.log(`Размер заработной платы за вычетом налогов равен ${salaryTaxFree(salary)}`);
 
@@ -45,10 +45,9 @@ const inputCorrectValue = () => {
     }
     console.log(correctNumber);
     return correctNumber;
-
 }
 
-console.log(`Максимальное из введённых - ${maxOfNumbers(inputCorrectValue(), inputCorrectValue(), inputCorrectValue())}`);
+console.log(`Максимальное из введённых выше - ${maxOfNumbers(inputCorrectValue(), inputCorrectValue(), inputCorrectValue())}`);
 
 
 /*
