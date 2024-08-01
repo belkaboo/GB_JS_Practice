@@ -37,13 +37,11 @@ const maxOfNumbers = (a, b, c) => {
     return maxResult;
 }
 
-const inputCorrectValue = () => {
-    let correctNumber = +prompt(`Введите число `);
-    while (isNaN(correctNumber)) {
-        alert('Не число');
-        correctNumber = +prompt(`Введите число!!!`);
-    }
-    console.log(correctNumber);
+const inputCorrectValue = () => {  // переписано на do while
+    let correctNumber;
+    do {
+        correctNumber = +prompt(`Введите число `);
+    } while (isNaN(correctNumber))
     return correctNumber;
 }
 
