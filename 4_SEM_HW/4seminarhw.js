@@ -61,7 +61,7 @@ const arrayOfNumbers = getRandomArray(5, 9);
 console.log(arrayOfNumbers);
 console.log(`Cумма элементов - ${SumOfArrayElements(arrayOfNumbers)}`);
 console.log(`Минимальное число - ${Math.min(...arrayOfNumbers)}`);
-console.log(`Есть ли число 3 - ${arrayOfNumbers.includes(3) ? true : false}`);
+console.log(`Есть ли число 3 - ${arrayOfNumbers.includes(3)}`);
 
 
 
