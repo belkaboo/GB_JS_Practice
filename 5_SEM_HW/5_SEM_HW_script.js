@@ -12,9 +12,11 @@ const numbers = {
     keyin7: 7,
 }
 
-numbers.forEach(element => {
-    //todo
-});
+for (const key in numbers) {
+    if (numbers[key] > 3) console.log(numbers[key]);
+}
+console.log(numbers);
+
 
 /*
 Задание 2
@@ -45,11 +47,10 @@ const post = {
     ],
 };
 
-
-
-
-
-
+console.log(post.author);
+console.log(post.comments[0].rating.dislikes);
+console.log(post.comments[1].userId);
+console.log(post.comments[1].text);
 
 
 /*
@@ -73,11 +74,14 @@ const products = [
 ];
 
 
+products.forEach(element => {
+    for (const key in element) {
+        if (key === 'price') element[key] += element[key] / 100 * 15;
 
+    }
+});
 
-
-
-
+console.log(products);
 
 
 /*
@@ -114,6 +118,11 @@ const productsNew = [
     },
 ];
 
+const productWithPhoto = productsNew.filter(item => item.photos && item.photos.length > 0);
+console.log(productWithPhoto);
+
+const sortedProducts = productsNew.sort((a, b) => a.price - b.price);
+console.log(sortedProducts);
 
 
 /*
@@ -126,5 +135,9 @@ const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
 
 
+const concatedArray = en.reduce((acc, a, b) => {
+    acc[a] = ru[b];
+    return acc
+}, {});
 
-
+console.log(concatedArray);
