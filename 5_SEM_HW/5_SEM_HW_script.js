@@ -15,7 +15,6 @@ const numbers = {
 for (const key in numbers) {
     if (numbers[key] > 3) console.log(numbers[key]);
 }
-console.log(numbers);
 
 
 /*
@@ -76,7 +75,7 @@ const products = [
 
 products.forEach(element => {
     for (const key in element) {
-        if (key === 'price') element[key] += element[key] / 100 * 15;
+        if (key === 'price') element[key] *= 1.15; // todo тупит результат
 
     }
 });

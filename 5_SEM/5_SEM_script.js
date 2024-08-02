@@ -52,6 +52,8 @@ delete (user.surname);
 const arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 const arr2 = [1, 2, 3, 4, 5, 6, 7];
 
+
+// решение в лоб
 const mer = {};
 for (let i = 0; i < arr1.length; i++) {
     mer[arr1[i]] = arr2[i];
@@ -59,8 +61,9 @@ for (let i = 0; i < arr1.length; i++) {
 }
 console.log(mer);
 
-const merjedObj = arr1.reduce((acc, element, index) => {
-    acc[element] = arr2[index];
+// через метод .reduce()
+const merjedObj = arr1.reduce((acc, element1, element2) => {
+    acc[element1] = arr2[element2];
     return acc;
 }, {});
 
@@ -115,3 +118,34 @@ const products = [
 products.forEach(element => {
     console.log(element.title);
 });
+
+
+//  Найдите сумму элементов приведенного объекта.
+
+const object = {
+    key1: {
+        key1: 1,
+        key2: 2,
+        key3: 3,
+    },
+    key2: {
+        key1: 4,
+        key2: 5,
+        key3: 6,
+    },
+    key3: {
+        key1: 7,
+        key2: 8,
+        key3: 9,
+    },
+}
+
+let result = 0;
+
+for (const key in object) {
+    for (const key1 in object[key]) {
+        result += object[key][key1];
+    }
+}
+
+console.log(result);
