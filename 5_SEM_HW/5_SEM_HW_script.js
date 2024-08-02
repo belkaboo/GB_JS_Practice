@@ -75,7 +75,7 @@ const products = [
 
 products.forEach(element => {
     for (const key in element) {
-        if (key === 'price') element[key] *= 1.15; // todo тупит результат
+        if (key === 'price') element[key] *= 0.85; // todo тупит результат
 
     }
 });
